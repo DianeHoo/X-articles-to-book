@@ -197,7 +197,10 @@ with open(typ_path, 'w') as f:
     f.write(typ_source)
 print(f"\nWrote {len(typ_source)} chars to {typ_path}")
 
-pdf_path = os.path.expanduser('~/Downloads/collected-readings.pdf')
+# Derive filename from book title
+safe_filename = re.sub(r'[^\w\s\-]', '', book_title).strip()
+safe_filename = re.sub(r'\s+', ' ', safe_filename)
+pdf_path = os.path.expanduser(f'~/Downloads/{safe_filename}.pdf')
 result = subprocess.run(
     ['/opt/homebrew/bin/typst', 'compile', typ_path, pdf_path],
     capture_output=True, text=True
