@@ -111,9 +111,13 @@ When the source is an X post/article:
 
 ## Layout
 
-- **Paper:** US Letter landscape (flipped)
+- **Paper:** A4 landscape (flipped)
 - **Columns:** Two, with gap
 - **Font:** Charter throughout
+
+### Article Flow
+
+Articles flow continuously without full page breaks. Each new article starts at the top of the next column using `#colbreak()` in Typst, which fills the blank column from the previous article and keeps the book compact.
 
 ### Type Hierarchy
 

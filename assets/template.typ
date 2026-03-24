@@ -6,7 +6,7 @@
 //   #let articles = ((title: "...", author: "...", body: "..."), ...)
 
 // ── Cover page ──────────────────────────────────────────────
-#set page(paper: "us-letter", flipped: true)
+#set page(paper: "a4", flipped: true)
 #page(margin: (x: 1.5in, y: 2in), columns: 1, header: none, footer: none)[
   #align(center + horizon)[
     #block(spacing: 0.6em)[
@@ -21,7 +21,7 @@
 
 // ── Document settings ───────────────────────────────────────
 #set page(
-  paper: "us-letter",
+  paper: "a4",
   flipped: true,
   margin: 0.75in,
   columns: 2,
